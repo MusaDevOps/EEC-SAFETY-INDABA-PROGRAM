@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAFETY INDABA 2025 - Programme</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-banner">
+      <div class="swoosh"></div>
+      <div class="meta-left">
+        <img src="assets/eec_logo.png" alt="EEC" class="eec-gutter-logo" aria-hidden="true">
+        <div class="zero"><span class="hash">#</span><span class="word-zero">ZERO</span></div>
+        <div class="zero"><span class="word-fat">Fatalities</span></div>
+        <div class="summit"><em>Safety Summit</em></div>
+      </div>
+      <div class="meta-right">
+        <div class="date-badge" aria-label="Event date and time">
+          <span class="pill">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" stroke="rgba(255,255,255,0.9)" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 1 1 2 0v1Zm12 6H5v10h14V8Z"/>
+            </svg>
+            18 September 2025
+          </span>
+          <span class="pill">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" stroke="rgba(255,255,255,0.9)" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 5a1 1 0 1 0-2 0v5a1 1 0 0 0 .293.707l3 3a1 1 0 1 0 1.414-1.414L13 11.586V7Z"/>
+            </svg>
+            8:00 am - 3:00 pm
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content-bg">
+    <div class="branding">
+      <h1>SAFETY INDABA 2025</h1>
+    </div>
+    <div class="controls">
+      <button id="downloadPdfBtn" class="btn">Download PDF</button>
+    </div>
+
+    <main>
+    <section class="programme-section">
+      <div class="table-wrapper">
+        <aside class="vertical-ribbon" aria-hidden="true"><span>PROGRAMME</span></aside>
+        <div class="ribbon-divider" aria-hidden="true"></div>
+        <table class="programme-table" aria-describedby="programmeCaption">
+          <caption id="programmeCaption" class="sr-only">Full schedule of the Safety Indaba 2025</caption>
+          <thead>
+            <tr>
+              <th scope="col" style="width: 18%">TIME</th>
+              <th scope="col" style="width: 42%">ACTIVITY</th>
+              <th scope="col" style="width: 40%">SPEAKER/FACILITATOR</th>
+            </tr>
+          </thead>
+          <tbody id="programmeBody">
+            <!-- Rendered dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-tagline">Zero fatalities. Zero tolerance to incidents. Safety first</div>
+    <small>© 2025 Safety Indaba</small>
+  </footer>
+
+  <!-- Fallback embedded data used if schedule.json cannot be loaded locally -->
+  <script id="embeddedSchedule" type="application/json">
+  {
+    "title": "SAFETY INDABA 2025",
+    "tagline": "Zero fatalities. Zero tolerance to incidents. Safety first",
+    "items": [
+      {"time": "07:30 - 08:00", "activity": "Registration and Stall exploration", "speakers": ""},
+      {"time": "08:00 - 08:15", "activity": "Safety Clip - Welcome Remarks", "speakers": "Mr Bheki Motsa - Eswatini Electricity Company"},
+      {"time": "08:15 - 08:35", "activity": "Keynote Address", "speakers": "Mr Ernest Mkhonta - Eswatini Electricity Company"},
+      {"time": "08:35 - 08:55", "activity": "Operational Presentation: Challenges & Success Stories around Safety.", "speakers": "Mr Sibusiso Khoza - Royal Eswatini Sugar Corporation"},
+      {"time": "08:55 - 09:05", "activity": "Safety Quiz Session", "speakers": "Ms Lungile Mahlalela & Mr Thando V Dlamini - Eswatini Electricity Company"},
+      {"time": "09:05 - 09:20", "activity": "Presentation: at work.", "speakers": "Mr Siyabonga Mabuza - Eswatini Business Health"},
+      {"time": "09:20 - 09:40", "activity": "Presentation: Mental Health & Safety — Incident Investigation & Lessons Learned.", "speakers": "Mr Simanga Dlamini - Eswatini Electricity Company"},
+      {"time": "09:40 - 10:10", "activity": "TEA BREAK", "speakers": ""},
+      {"time": "10:10 - 11:10", "activity": "Panel Discussion: Risk Management vs Financial Preparedness in Safety.", "speakers": "Moderator: Ms Makaziwengokuhle Ndlangamandla - Eswatini Electricity Company | Panelists: Mr Senza Dlamini - Tibiyo Insurance Group; Mr Sicelo Mashwama - Eswatini Railway; Mr Thabiso Simelane - Standard Bank Eswatini; Mr Thembumenzi Kunene - Eswatini Electricity Company; Mr Sambulo Mamba - Ubombo Sugar Limited"},
+      {"time": "11:10 - 11:25", "activity": "Expert Reflection: MTN Eswatini", "speakers": "Ms Lomakhosetive Tshabalala"},
+      {"time": "11:10 - 11:25", "activity": "Entertainment", "speakers": "Sisonkhe Arts Group"},
+      {"time": "11:25 - 12:25", "activity": "Panel Discussion: Safety Leadership & Industry Experiences.", "speakers": "Panelists: Mr Cusi Manana - Ubombo Sugar Limited; Ms Nontombi Motsa - Maphanga - Eswatini Water Service Corporation; Mr Vusie Gama - Eswatini Electricity Company; Mr Lemekani Mwanza - Maloma Colliery; Mr Skhumbuzo Mohammed - Ubombo Sugar Limited; Mr Sandile Ferreira - BSA Holdings"},
+      {"time": "12:25 - 13:30", "activity": "LUNCH", "speakers": ""},
+      {"time": "13:30 - 13:45", "activity": "Life Saving Rules.", "speakers": "Mr Vusie Gama - Eswatini Electricity Company"},
+      {"time": "13:45 - 14:15", "activity": "Safety Culture Ambassadors Recognition", "speakers": "Mr Lemekani Mwanza - Maloma Colliery; Mr Skhumbuzo Mohammed - Ubombo Sugar Limited; Mr Sandile Ferreira - BSA Holdings"},
+      {"time": "14:15 - 14:45", "activity": "Closing", "speakers": "Expert Reflection: Ms Phazi Zwane - Ministry of Labour; Mr Mthunzi Masina - Eswatini Electricity Company; Ms Noncedo Mamba - Eswatini Electricity Company; Mr Mphumuzi Maziya - Eswatini Electricity Company"}
+    ]
+  }
+  </script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
+
+

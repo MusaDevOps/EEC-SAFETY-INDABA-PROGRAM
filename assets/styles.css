@@ -1,0 +1,118 @@
+/* SAFETY INDABA 2025 Styles */
+:root{
+  /* EEC palette approximation based on artwork */
+  --eec-green: #2ea63a;
+  --eec-green-dark: #22872d;
+  --eec-lime: #a3d336;
+  --eec-yellow: #ffd24d;
+  --eec-teal: #0aa06e;
+  --text: #24303f;
+  --muted: #667085;
+  --border: #e5e7eb;
+  --bg: #ffffff;
+  --row-alt: #f7fbf5;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  background-image: url('eec_background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  line-height: 1.5;
+}
+
+.site-header{padding:0;border-bottom:1px solid var(--border);background:#fff}
+.top-banner{position:relative; display:flex; align-items:flex-start; justify-content:space-between; padding:14px 0 40px; overflow:hidden; background:linear-gradient(135deg,#ffffff 60%, #f0fff4 60%)}
+.top-banner .swoosh{position:absolute; left:-80px; top:-120px; width:420px; height:260px; background: radial-gradient(ellipse at top left, var(--eec-yellow), transparent 60%), radial-gradient(ellipse at bottom left, var(--eec-lime), transparent 70%); filter: saturate(1.1)}
+.meta-left{position:relative; z-index:1}
+.eec-gutter-logo{position:absolute; left:0; top:8px; width:110px; height:90px; object-fit:contain; filter: drop-shadow(0 0 10px rgba(46,166,58,0.5));}
+.zero{font-weight:900; font-size:1.5rem; color:#1f2937; margin-left:150px; line-height:1; display:flex; align-items:flex-start; text-shadow: 0 2px 0 rgba(46,166,58,0.35), 0 0 14px rgba(46,166,58,0.55), 0 0 26px rgba(163,211,54,0.45)}
+.zero + .zero{margin-top:-20px}
+.zero .hash{font-size:2.53em; line-height:1; margin-right:6px; display:inline-block}
+.zero .word-zero{font-size:0.85em; font-weight:900; letter-spacing:0.5px; position:relative; top:8px}
+.zero .word-fat{font-size:0.85em; font-weight:800; display:block; margin-left: calc(2.3em + -10px); position:relative; top:-4px}
+.zero span{font-weight:700; color:#6b7280}
+.summit{margin-top:0; color:#111827; margin-left:150px; font-size:1.1em; text-shadow: 0 1px 0 rgba(46,166,58,0.25), 0 0 10px rgba(46,166,58,0.45)}
+.summit em{color:var(--eec-teal); font-style:italic}
+.meta-right{display:flex; gap:16px; align-items:flex-start}
+.date-badge{display:flex; gap:8px; align-items:center}
+.pill{background: var(--eec-green); color:#fff; padding:6px 10px; border-radius:14px; font-weight:700; font-size:0.85rem}
+.pill .icon{width:18px; height:18px; margin-right:8px; vertical-align:-3px; filter: drop-shadow(0 0 2px rgba(0,0,0,0.25))}
+.branding{padding:0 24px 12px}
+.branding h1{margin:0;font-weight:900;letter-spacing:1px; font-size:2.4rem; color:var(--eec-green-dark)}
+.branding .tagline{display:none}
+
+.controls{display:flex;gap:10px; padding:0 24px 16px}
+.btn{
+  appearance:none;border:0;cursor:pointer;
+  background: var(--eec-green); color:#fff; padding:10px 14px; border-radius:8px; font-weight:700;
+}
+.btn:hover{background:var(--eec-green-dark)}
+.btn-secondary{background:#374151}
+.btn-secondary:hover{background:#111827}
+
+main{padding:24px}
+.content-bg{padding-bottom:8px}
+.programme-section h2{margin:0 0 12px; font-size:1.4rem}
+
+.table-wrapper{position:relative; overflow:auto; border:1px solid rgba(46,166,58,0.25); border-radius:12px; background:transparent; display:flex; backdrop-filter: saturate(1.05)}
+.vertical-ribbon{writing-mode:vertical-rl; transform:rotate(180deg); background:transparent; color:var(--eec-green); font-weight:900; letter-spacing:2px; display:flex; align-items:center; justify-content:center; padding:12px 8px; min-width:72px; border-right:6px solid var(--eec-green)}
+.vertical-ribbon span{display:block; font-size:clamp(28px,6vw,64px); text-shadow:0 1px 0 rgba(0,0,0,0.06)}
+.ribbon-divider{display:block; width:4px; min-width:4px; background:var(--eec-green)}
+.programme-table{width:100%; border-collapse:separate; border-spacing:0; background: rgba(46,166,58,0.06)}
+.programme-table thead th{position:sticky; top:0; z-index:1; background:var(--eec-green); color:#fff; text-align:left; padding:12px 14px; border-bottom:2px solid var(--eec-green-dark); font-weight:900}
+.programme-table tbody td{padding:12px 14px; vertical-align:top; border-bottom:1px solid rgba(46,166,58,0.18); background: transparent}
+.programme-table tbody tr:nth-child(even){background:rgba(46,166,58,0.08)}
+.programme-table tbody tr.break td{background:var(--eec-green); color:#fff; font-weight:900; border-bottom:2px solid var(--eec-green-dark)}
+.programme-table .activity{font-weight:600}
+.programme-table .speakers{color:#374151}
+
+.site-footer{padding:16px 24px; color:var(--muted); border-top:1px solid var(--border); text-align:center}
+.footer-tagline{margin-bottom:6px; font-weight:800; color:var(--eec-green-dark); display:inline-block; padding:6px 12px; border-radius:999px; background:linear-gradient(90deg, rgba(46,166,58,0.12), rgba(163,211,54,0.12)); box-shadow: 0 0 0 1px rgba(46,166,58,0.15) inset, 0 1px 6px rgba(46,166,58,0.18)}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Responsive */
+@media (max-width: 1024px){
+  .branding h1{font-size:2rem}
+  .controls{padding:0 16px 12px}
+  main{padding:16px}
+}
+
+@media (max-width: 768px){
+  .eec-gutter-logo{display:none}
+  .zero,.summit{margin-left:16px}
+  .top-banner{padding:12px 0 24px}
+  .branding{padding:0 16px 10px}
+  .branding h1{font-size:1.75rem}
+  .date-badge{flex-wrap:wrap}
+  .pill{font-size:0.8rem}
+  .controls{padding:0 16px 12px}
+  .btn{width:100%}
+}
+
+@media (max-width: 600px){
+  .vertical-ribbon,.ribbon-divider{display:none}
+  .table-wrapper{border-radius:8px}
+  .programme-table thead th{font-size:0.85rem; padding:10px}
+  .programme-table tbody td{padding:10px; font-size:0.9rem}
+}
+
+/* Print styles */
+@media print{
+  .controls{display:none !important}
+  .site-header{border-bottom:2px solid #000; background:#fff}
+  body{background:none !important}
+  main{padding:0}
+  .table-wrapper{border:0}
+  .programme-table thead th{background:#fff; color:#000; border-bottom:2px solid #000}
+  .programme-table tbody td{border-bottom:1px solid #999}
+}
+
+
