@@ -17,14 +17,49 @@
         tr.classList.add('break');
       }
       const tdTime = document.createElement('td');
-      tdTime.textContent = item.time || '';
+      tdTime.innerHTML = `<strong>${escapeHtml(item.time || '')}</strong>`;
       const tdActivity = document.createElement('td');
-      tdActivity.innerHTML = `<div class="activity">${escapeHtml(item.activity||'')}</div>`;
+      tdActivity.innerHTML = `<div class="activity">${boldKeywords(escapeHtml(item.activity||''))}</div>`;
       const tdSpeakers = document.createElement('td');
-      tdSpeakers.innerHTML = `<div class="speakers">${escapeHtml(item.speakers||'')}</div>`;
+      const isPanel = item.activity.includes('Panel Discussion');
+      tdSpeakers.innerHTML = `<div class="speakers">${formatSpeakers(item.speakers||'', isPanel)}</div>`;
       tr.appendChild(tdTime); tr.appendChild(tdActivity); tr.appendChild(tdSpeakers);
       tableBody.appendChild(tr);
     });
+  }
+
+  function boldKeywords(text){
+    return text
+      .replace(/Presentation:/g, '<strong>Presentation:</strong>')
+      .replace(/Panel Discussion:/g, '<strong>Panel Discussion:</strong>')
+      .replace(/Moderator:/g, '<strong>Moderator:</strong>')
+      .replace(/Panelists:/g, '<strong>Panelists:</strong>')
+      .replace(/Expert Reflection:/g, '<strong>Expert Reflection:</strong>')
+      .replace(/Entertainment/g, '<strong>Entertainment</strong>');
+  }
+
+  function formatSpeakers(speakers, isPanelDiscussion){
+    if (isPanelDiscussion && speakers.includes('Panelists:')) {
+      const parts = speakers.split('|');
+      let formatted = '';
+      parts.forEach(part => {
+        part = part.trim();
+        if (part.startsWith('Moderator:')) {
+          formatted += boldKeywords(escapeHtml(part)) + '<br>';
+        } else if (part.startsWith('Panelists:')) {
+          formatted += boldKeywords(escapeHtml('Panelists:')) + '<br>';
+          const list = part.split('Panelists:')[1].split(';').map(s => s.trim()).filter(s => s);
+          formatted += '<ul>';
+          list.forEach(p => {
+            formatted += `<li>${escapeHtml(p)}</li>`;
+          });
+          formatted += '</ul>';
+        }
+      });
+      return formatted;
+    } else {
+      return boldKeywords(escapeHtml(speakers));
+    }
   }
 
   function escapeHtml(str){
